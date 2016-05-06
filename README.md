@@ -1,56 +1,79 @@
-# smart-template-processor
-You can process an template with an context object.  
+# smart-template-injector
+You can process an template injecting stretches of anything with an context object.  
 
   
 ## Usage  
 
 ```
-npm install smart-template-processor
+npm install smart-template-injector
 ```
 
 ### Selectors
-You can use basically two patterns to select tags:  
-* `{{property}}`  
-* `<%= property %>`  
+You can use basically on pattern to select inject tag:  
+* `/*inject:*/`  
   
-Both work the same way, and you can use they at the same time.  
+After of `:` you can put the property name of the object what you want to use.  
   
 ### Simple example  
 
 ```javascript
-var smartTemplateProcessor = require('smart-template-processor');
+var smartTemplateInjector = require('smart-template-injector');
 
-var template = "Hello {{nome}}! How are you {{nome}}? Your e-mail address is: {{email.address}}?";
+var template = ""
+	+ "/*inject:libs*/\n"
+	+ "\n"
+	+ "var smartSomeFunction = {\n"
+	+ "	someFunction: SomeFunction\n"
+	+ "};\n"
+	+ "\n"
+	+ "module.exports = smartSomeFunction;\n"
+	+ "\n"
+	+ "function SomeFunction() {\n"
+	+ "	console.log('All right.');\n"
+	+ "};\n"
+	+ "\n"
+	+ "/*inject:function*/\n";
+
 var obj = {
-		nome: "JulioGold",
-		email: {
-			address: "julio.gold@gmail.com"
-		}
-	};
+	libs: "var path = path || require('path');\nvar fs = fs || require('fs');",
+	function: "function AnotherFunction() {\n	console.log('All ok.');\n};"
+};
 
-console.log(smartTemplateProcessor.processTemplate(template, obj));
+console.log(smartTemplateInjector.inject(template, obj));
 ```  
 
-### We really can go more deep and complex 
+### Anyway we can go more deep and complex 
 
 ```javascript
-var smartTemplateProcessor = require('smart-template-processor');
+var smartTemplateInjector = require('smart-template-injector');
 
-var template = "Hello {{company.nome}}! How are you {{company.nome}}? This is your {{company.email.type}} e-mail address {{company.email.address}}?";
+var template = ""
+	+ "/*inject:module.libs*/\n"
+	+ "\n"
+	+ "var smartSomeFunction = {\n"
+	+ "	someFunction: SomeFunction\n"
+	+ "};\n"
+	+ "\n"
+	+ "module.exports = smartSomeFunction;\n"
+	+ "\n"
+	+ "function SomeFunction() {\n"
+	+ "	console.log('All right.');\n"
+	+ "};\n"
+	+ "\n"
+	+ "/*inject:module.function*/\n";
+
 var obj = {
-		company:{
-			nome: "JulioGold",
-			email: {
-				address: "julio.gold@gmail.com",
-				type: "Comercial"
-			}
-		}
-	};
+	module: {
+		libs: "var path = path || require('path');\nvar fs = fs || require('fs');",
+		function: "function AnotherFunction() {\n	console.log('All ok.');\n};"
+	}
+};
 
-console.log(smartTemplateProcessor.processTemplate(template, obj));
+console.log(smartTemplateInjector.inject(template, obj));
 ```  
   
 ### News  
-0.0.3 Added support to `<%= property =>` pattern of tag selector.  
+0.0.1 Project start.  
   
-Thanks  
+Danke  
+  
