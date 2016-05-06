@@ -37,9 +37,10 @@ var template = ""
 var obj = {
 	libs: "var path = path || require('path');\nvar fs = fs || require('fs');",
 	function: "function AnotherFunction() {\n	console.log('All ok.');\n};"
-};
+};  
 
 console.log(smartTemplateInjector.inject(template, obj));
+  
 ```  
 
 ### Anyway we can go more deep and complex 
@@ -67,9 +68,10 @@ var obj = {
 		libs: "var path = path || require('path');\nvar fs = fs || require('fs');",
 		function: "function AnotherFunction() {\n	console.log('All ok.');\n};"
 	}
-};
+};  
 
 console.log(smartTemplateInjector.inject(template, obj));
+  
 ```  
   
 ### News  
