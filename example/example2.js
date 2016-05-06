@@ -17,7 +17,7 @@ var template = ""
 
 var obj = {
 	module: {
-		libs: "var path = path || require('path');\nvar fs = fs || require('fs');",
+		libs: "var path = path || require('path');\nvar fs = fs || require('fs');\n",
 		function: "function AnotherFunction() {\n	console.log('All ok.');\n};"
 	}
 };
