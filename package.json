@@ -1,30 +1,30 @@
 {
-  "name": "smart-template-injector",
-  "version": "0.0.1",
-  "description": "You can process an template injecting stretches of anything with an context object.",
-  "main": "smartTemplateInjector.js",
-  "directories": {
-    "example": "example"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/JulioGold/smart-template-injector.git"
-  },
-  "keywords": [
-    "template",
-    "injector",
-    "render",
-    "context",
-    "object",
-    "inject"
-  ],
-  "author": "Julio Goldschmidt",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/JulioGold/smart-template-injector/issues"
-  },
-  "homepage": "https://github.com/JulioGold/smart-template-injector"
+    "name": "smart-template-injector",
+    "version": "0.0.2",
+    "description": "You can process an template injecting stretches of anything with an context object.",
+    "main": "smartTemplateInjector.js",
+    "directories": {
+        "example": "example"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/JulioGold/smart-template-injector.git"
+    },
+    "keywords": [
+        "template",
+        "injector",
+        "render",
+        "context",
+        "object",
+        "inject"
+    ],
+    "author": "Julio Goldschmidt",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/JulioGold/smart-template-injector/issues"
+    },
+    "homepage": "https://github.com/JulioGold/smart-template-injector"
 }
