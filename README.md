@@ -75,8 +75,8 @@ console.log(smartTemplateInjector.inject(template, obj));
 ```  
   
 ### News  
-0.0.1 Project start.
-0.0.2 Fix inject function to respect line breaks.    
+- 0.0.1 Project start.  
+- 0.0.2 Fix inject function to respect line breaks.  
   
 Danke  
   
