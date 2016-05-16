@@ -1,21 +1,20 @@
 # smart-template-injector
 You can process an template injecting stretches of anything with an context object.  
-
   
 ## Usage  
 
 ```
 npm install smart-template-injector
-```
-
-### Selectors
+```  
+  
+### Selectors  
 You can use basically on pattern to select inject tag:  
 * `/*inject:*/`  
   
 After of `:` you can put the property name of the object what you want to use.  
   
 ### Simple example  
-
+  
 ```javascript
 var smartTemplateInjector = require('smart-template-injector');
 
@@ -40,11 +39,10 @@ var obj = {
 };  
 
 console.log(smartTemplateInjector.inject(template, obj));
-  
 ```  
-
+  
 ### Anyway we can go more deep and complex 
-
+  
 ```javascript
 var smartTemplateInjector = require('smart-template-injector');
 
@@ -71,10 +69,10 @@ var obj = {
 };  
 
 console.log(smartTemplateInjector.inject(template, obj));
-  
 ```  
   
-### News  
+### News
+  
 - 0.0.1 Project start.  
 - 0.0.2 Fix inject function to respect line breaks.  
   
